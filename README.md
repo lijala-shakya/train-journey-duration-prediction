@@ -266,9 +266,7 @@ Within 120 minutes : 88.7% of predictions
 
 **Author**
 
-
-
-Your Name
+Lijala Shakya
 
 GitHub: https://github.com/lijala-shakya
 
