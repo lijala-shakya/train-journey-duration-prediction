@@ -58,7 +58,7 @@ train-journey-duration-prediction/
 
 1\. Clone the repository:
 
-git clone https://github.com/yourusername/train-journey-duration-prediction.git
+git clone https://github.com/lijala-shakya/train-journey-duration-prediction.git
 
 cd train-journey-duration-prediction
 
