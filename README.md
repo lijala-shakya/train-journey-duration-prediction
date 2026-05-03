@@ -14,29 +14,29 @@ This project builds a predictive model that estimates total journey duration usi
 
 
 
-\##  Dataset
+**Dataset**
 
-\- \*\*Source:\*\* Indian Railways Schedule Data
+&#x20;\*\*Source:\*\* Indian Railways Schedule Data
 
-\- \*\*Records:\*\* 186,074 stop-level entries
+&#x20;\*\*Records:\*\* 186,074 stop-level entries
 
-\- \*\*Trains:\*\* 11,113 unique train journeys
+&#x20;\*\*Trains:\*\* 11,113 unique train journeys
 
-\- \*\*Features:\*\* Station codes, arrival/departure times, distances, fares
+&#x20;\*\*Features:\*\* Station codes, arrival/departure times, distances, fares
 
 
 
-\## Problem Statement
+**Problem Statement**
 
 Given route information for a train journey, predict the total journey duration in minutes.
 
-\- \*\*Type:\*\* Supervised Regression
+&#x20;\*\*Type:\*\* Supervised Regression
 
-\- \*\*Target Variable:\*\* Journey\_Duration\_Minutes
+&#x20;\*\*Target Variable:\*\* Journey\_Duration\_Minutes
 
 
 
-\## Project Structure
+**Project Structure**
 
 train-journey-duration-prediction/
 
@@ -52,7 +52,7 @@ train-journey-duration-prediction/
 
 
 
-\##  Setup and Installation
+**Setup and Installation**
 
 
 
@@ -78,59 +78,59 @@ jupyter notebook train\_journey\_ml.ipynb
 
 
 
-\## Project Pipeline
+**Project Pipeline**
 
 
 
 \### Level 1 — Understanding the Data
 
-\- Loaded 186,074 records across 12 columns
+\-> Loaded 186,074 records across 12 columns
 
-\- Identified 11,113 unique trains
+\-> Identified 11,113 unique trains
 
-\- Performed data quality audit — zero missing values
+\-> Performed data quality audit — zero missing values
 
 
 
 \### Level 2 — Data Cleaning and Feature Engineering
 
-\- Converted HH:MM:SS times to total minutes from midnight
+\-> Converted HH:MM:SS times to total minutes from midnight
 
-\- Calculated journey duration per train as target variable
+\-> Calculated journey duration per train as target variable
 
-\- Engineered features: Total Distance, Total Stops, Fare averages, Dist Per Stop
+\-> Engineered features: Total Distance, Total Stops, Fare averages, Dist Per Stop
 
 
 
 \### Level 3 — Exploratory Data Analysis
 
-\- Visualized distance vs duration relationships
+\-> Visualized distance vs duration relationships
 
-\- Correlation heatmap across all features
+\-> Correlation heatmap across all features
 
-\- Pivot table of stops per train
+\-> Pivot table of stops per train
 
 
 
 \### Level 4 — Model Training and Evaluation
 
-\- Split data: 80% train / 20% test
+\-> Split data: 80% train / 20% test
 
-\- Applied StandardScaler for Linear Regression and KNN
+\-> Applied StandardScaler for Linear Regression and KNN
 
-\- Trained and compared 3 models
+\-> Trained and compared 3 models
 
 
 
 \### Level 5 — Clustering
 
-\- Applied KMeans clustering (K=4)
+\-> Applied KMeans clustering (K=4)
 
-\- Identified 4 natural train categories
+\-> Identified 4 natural train categories
 
 
 
-\## Models and Results
+**Models and Results**
 
 
 
@@ -150,45 +150,43 @@ jupyter notebook train\_journey\_ml.ipynb
 
 
 
-\---
 
 
-
-\## ⚖️ Model Trade-offs
+**Model Trade-offs**
 
 
 
 \### Linear Regression
 
-\- Simple and fast, good baseline
+\-> Simple and fast, good baseline
 
-\- Cannot capture complex non-linear patterns
+\-> Cannot capture complex non-linear patterns
 
-\- Result: R² = 0.52
+\-> Result: R² = 0.52
 
 
 
 \### Decision Tree
 
-\- Handles non-linear relationships
+\-> Handles non-linear relationships
 
-\- No feature scaling needed
+\-> No feature scaling needed
 
-\- Tuned max\_depth=8 to prevent overfitting
+\-> Tuned max\_depth=8 to prevent overfitting
 
-\- Result: R² = 0.82 (best model)
+\-> Result: R² = 0.82 (best model)
 
 
 
 \### KNN
 
-\- Finds similar trains and averages duration
+\-> Finds similar trains and averages duration
 
-\- Requires feature scaling
+\-> Requires feature scaling
 
-\- Tuned K=11 using elbow analysis
+\-? Tuned K=11 using elbow analysis
 
-\- Result: R² = 0.82 (close second)
+\-> Result: R² = 0.82 (close second)
 
 
 
@@ -212,7 +210,7 @@ jupyter notebook train\_journey\_ml.ipynb
 
 
 
-\##  Validation Results
+**Validation Results**
 
 
 
@@ -228,45 +226,45 @@ Within 120 minutes : 88.7% of predictions
 
 
 
-\##  Key Findings
+**Key Findings**
 
 
 
-\- Decision Tree outperforms both Linear Regression and KNN
+\-> Decision Tree outperforms both Linear Regression and KNN
 
-\- Distance and number of stops are the strongest predictors
+\-> Distance and number of stops are the strongest predictors
 
-\- High fare trains travel faster despite longer distances
+\-> High fare trains travel faster despite longer distances
 
-\- 4 natural train categories exist in Indian Railways data
-
-
-
-
-
-\##  Technologies Used
-
-
-
-\- Python 3
-
-\- Pandas — data manipulation
-
-\- NumPy — numerical computing
-
-\- Matplotlib and Seaborn — visualizations
-
-\- Scikit-learn — ML models
-
-\- Joblib — model saving
+\-> 4 natural train categories exist in Indian Railways data
 
 
 
 
 
+**Technologies Used**
 
 
-\##  Author
+
+\-> Python 3
+
+\-> Pandas — data manipulation
+
+\-> NumPy — numerical computing
+
+\-> Matplotlib and Seaborn — visualizations
+
+\-> Scikit-learn — ML models
+
+\-> Joblib — model saving
+
+
+
+
+
+
+
+**Author**
 
 
 
